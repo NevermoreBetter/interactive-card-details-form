@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Interactive card details form</title>
+    <script src="/bootstrap.min.js"></script>
+    <script src="index.js" defer></script>
+    <link rel="stylesheet" href="bootstrap.min.js" />
+    <link rel="stylesheet" href="style/style.css" />
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="hero__images">
+        <div class="card__images">
+          <div class="card__front">
+            <svg
+              width="84"
+              height="47"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <ellipse
+                cx="23.478"
+                cy="23.5"
+                rx="23.478"
+                ry="23.5"
+                fill="#fff"
+              />
+              <path
+                d="M83.5 23.5c0 5.565-4.507 10.075-10.065 10.075-5.559 0-10.065-4.51-10.065-10.075 0-5.565 4.506-10.075 10.065-10.075 5.558 0 10.065 4.51 10.065 10.075Z"
+                stroke="#fff"
+              />
+            </svg>
+            <p class="front__number">0000 0000 0000 0000</p>
+            <div class="front__text">
+              <p class="front__name">Jane Appleseed</p>
+              <p class="front__date">00 / 00</p>
+            </div>
+          </div>
+          <div class="card__back">
+            <div class="back__cvc">000</div>
+          </div>
+        </div>
+      </div>
+      <div class="hero__form">
+        <div class="mb-3 form">
+          <label for="name" class="form-label">Cardholder Name</label>
+          <input
+            type="text"
+            class="form-control"
+            name=""
+            id="name"
+            aria-describedby="helpId"
+            placeholder="e.g. Jane Appleseed"
+          />
+          <label for="number" class="form-label">Card Number</label>
+          <input
+            type="text"
+            class="form-control"
+            name=""
+            maxlength="19"
+            id="number"
+            aria-describedby="helpId"
+            placeholder=" e.g. 1234 5678 9123 0000"
+          />
+          <div class="hint" id="number-hint"> Wrong format, numbers only </div>
+          <div id="date-label">
+            <label for="date-input" class="form-label">Exp. Date (MM/YY)</label>
+            <label for="cvc" class="form-label">CVC</label>
+          </div>
+
+          <div class="date">
+            <input
+              type="text"
+              class="form-control w-15"
+              name=""
+              min="1"
+              maxlength="2"
+              id="date-input"
+              aria-describedby="helpId"
+              placeholder="MM"
+            />
+
+            <input
+              type="text"
+              class="form-control w-15"
+              name=""
+              maxlength="2"
+              id="year-input"
+              aria-describedby="helpId"
+              placeholder="YY"
+            />
+            <input
+              type="text"
+              class="form-control"
+              name=""
+              minl
+              maxlength="3"
+              id="cvc"
+              aria-describedby="helpId"
+              placeholder="e.g. 123"
+            />
+          </div>
+          <div class="flex">
+            <div class="hint" id="date-hint"> Can`t be blank </div>
+            <div class="hint" id="cvc-hint"> Can`t be blank </div>
+          </div>
+
+          <button type="submit" class="btn btn-primary" id="button"
+            >Confirm</button
+          >
+        </div>
+      </div>
+      <div class="hero__confirm hidden">
+        <div
+          ><svg
+            width="80"
+            height="80"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <circle cx="40" cy="40" r="40" fill="url(#a)" />
+            <path d="M28 39.92 36.08 48l16-16" stroke="#fff" stroke-width="3" />
+            <defs>
+              <linearGradient
+                id="a"
+                x1="-23.014"
+                y1="11.507"
+                x2="0"
+                y2="91.507"
+                gradientUnits="userSpaceOnUse"
+              >
+                <stop stop-color="#6348FE" />
+                <stop offset="1" stop-color="#610595" />
+              </linearGradient>
+            </defs>
+          </svg>
+        </div>
+        <h2>Thank you!</h2>
+        <p>We've added your card details</p>
+        <a name="" id="" class="btn btn-primary" href="#" role="button"
+          >Continue</a
+        >
+      </div>
+    </div>
+
+    <!-- Completed state start -->
+
+    <!-- <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Your Name Here</a>.
+    </div> -->
+  </body>
+</html>
